@@ -14,8 +14,23 @@ class recipesVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by recipesParser#condition.
+    def visitCondition(self, ctx:recipesParser.ConditionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by recipesParser#ingredient.
     def visitIngredient(self, ctx:recipesParser.IngredientContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by recipesParser#quantity.
+    def visitQuantity(self, ctx:recipesParser.QuantityContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by recipesParser#descriptor.
+    def visitDescriptor(self, ctx:recipesParser.DescriptorContext):
         return self.visitChildren(ctx)
 
 

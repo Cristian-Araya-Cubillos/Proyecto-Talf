@@ -1,7 +1,13 @@
 grammar recipes;
 
-query       : ingredient (',' ingredient)* ;
-ingredient  : WORD ;
+query          : condition (LOGICAL_OP condition)* ;
+condition      : ingredient | '(' query ')' ;
+ingredient     : quantity? descriptor* WORD (descriptor+ WORD)* ;
+quantity       : NUMBER ;
+descriptor     : WORD ;
+WORD           : [a-zA-Z]+ ;
+NUMBER         : [0-9]+ ;
+LOGICAL_OP     : ',' | '|' ;
+WS             : [ \t\n\r]+ -> skip ;
 
-WORD        : [a-zA-Z]+ ;
-WS          : [ \t\n\r]+ -> skip ;
+

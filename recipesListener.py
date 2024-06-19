@@ -17,12 +17,39 @@ class recipesListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by recipesParser#condition.
+    def enterCondition(self, ctx:recipesParser.ConditionContext):
+        pass
+
+    # Exit a parse tree produced by recipesParser#condition.
+    def exitCondition(self, ctx:recipesParser.ConditionContext):
+        pass
+
+
     # Enter a parse tree produced by recipesParser#ingredient.
     def enterIngredient(self, ctx:recipesParser.IngredientContext):
         pass
 
     # Exit a parse tree produced by recipesParser#ingredient.
     def exitIngredient(self, ctx:recipesParser.IngredientContext):
+        pass
+
+
+    # Enter a parse tree produced by recipesParser#quantity.
+    def enterQuantity(self, ctx:recipesParser.QuantityContext):
+        pass
+
+    # Exit a parse tree produced by recipesParser#quantity.
+    def exitQuantity(self, ctx:recipesParser.QuantityContext):
+        pass
+
+
+    # Enter a parse tree produced by recipesParser#descriptor.
+    def enterDescriptor(self, ctx:recipesParser.DescriptorContext):
+        pass
+
+    # Exit a parse tree produced by recipesParser#descriptor.
+    def exitDescriptor(self, ctx:recipesParser.DescriptorContext):
         pass
 
 
